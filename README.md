@@ -1,15 +1,16 @@
 <div align="center">
 
-# 🍥 Naruto: Rise of a Ninja — Port Nativo para Android
+# 🍥 Naruto: Rise of a Ninja — Port Nativo
 
-**O jogo de Xbox 360 rodando nativamente no Android (ARM64), sem emulador de CPU.**
+**O jogo de Xbox 360 rodando nativamente no Android (ARM64) e no PC (Windows x64), sem emulador de CPU.**
 
-![Plataforma](https://img.shields.io/badge/Android-11%2B-3DDC84?logo=android&logoColor=white)
+![Android](https://img.shields.io/badge/Android-11%2B-3DDC84?logo=android&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
 ![Arquitetura](https://img.shields.io/badge/arm64--v8a-64%20bits-orange)
 ![Gráficos](https://img.shields.io/badge/Vulkan-1.1-AC162C?logo=vulkan&logoColor=white)
 ![Versão](https://img.shields.io/badge/vers%C3%A3o-0.1-blue)
 
-[**⬇️ Baixar o APK**](../../releases/latest) · [Requisitos](#-requisitos) · [Instalação](#-instalação) · [Configurações](#%EF%B8%8F-configurações) · [Perguntas](#-perguntas-frequentes)
+[**⬇️ Baixar (Android e PC)**](../../releases/latest) · [Requisitos](#-requisitos) · [Instalação](#-instalação) · [Configurações](#%EF%B8%8F-configurações) · [Perguntas](#-perguntas-frequentes)
 
 <img src="docs/screenshots/menu.png" alt="Menu inicial" width="90%">
 
@@ -19,10 +20,10 @@
 
 ## 📖 Sobre
 
-Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.xex`) e a biblioteca `AI2C.dll` foram **recompilados estaticamente** de PowerPC para ARM64. O resultado é código nativo que roda direto no processador do celular. A parte gráfica usa um backend Vulkan adaptado e otimizado para GPUs de celular (Mali e Adreno).
+Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.xex`) e a biblioteca `AI2C.dll` foram **recompilados estaticamente** de PowerPC para ARM64 (celular) e x86-64 (PC). O resultado é código nativo que roda direto no processador. A parte gráfica usa um backend Vulkan adaptado e otimizado para GPUs de celular (Mali e Adreno).
 
 > [!IMPORTANT]
-> **O APK não contém nenhum arquivo do jogo.** Você precisa da sua **própria cópia** de *Naruto: Rise of a Ninja* para Xbox 360, na versão indicada em [Versão do jogo](#-versão-do-jogo-obrigatória).
+> **O APK e o pacote de PC não contêm nenhum arquivo do jogo.** Você precisa da sua **própria cópia** de *Naruto: Rise of a Ninja* para Xbox 360, na versão indicada em [Versão do jogo](#-versão-do-jogo-obrigatória).
 
 ### ✨ Destaques
 
@@ -32,7 +33,8 @@ Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.x
 - **Controles na tela:** dois analógicos, D-pad, todos os botões e gatilhos. Controles Bluetooth e USB também funcionam.
 - **Painel de desempenho:** FPS e uso de CPU, GPU e RAM. Pode ser arrastado pela tela ou recolhido.
 - **Modo 16:9 ou esticado** para a tela inteira.
-- Menu inicial com tema de Naruto 🌀
+- Menu inicial com tema de Naruto 🌀, o mesmo no celular e no PC
+- **Versão de PC** com janela ou tela cheia, teclado e controles de Xbox ou PlayStation
 
 ## 📸 Capturas
 
@@ -41,8 +43,12 @@ Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.x
 | <img src="docs/screenshots/historia.jpg" width="100%"> | <img src="docs/screenshots/luta.jpg" width="100%"> |
 | **No celular (controles e painel)** | **Luta em 4K** |
 | <img src="docs/screenshots/celular.jpg" width="100%"> | <img src="docs/screenshots/luta-4k.jpg" width="100%"> |
+| **Menu no PC** | |
+| <img src="docs/screenshots/menu-pc.png" width="100%"> | |
 
 ## 📱 Requisitos
+
+### Android
 
 | | Mínimo | Recomendado |
 |---|---|---|
@@ -53,6 +59,15 @@ Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.x
 | **Espaço** | ~4,5 GB (arquivos do jogo) | — |
 
 Testado no **Poco X7 Pro** (Dimensity 8400 Ultra, Mali-G720, 12 GB).
+
+### 🖥️ PC
+
+| | Mínimo | Recomendado |
+|---|---|---|
+| **Sistema** | Windows 10 64 bits | Windows 11 |
+| **Processador** | x86-64 com AVX | 4 núcleos ou mais |
+| **Placa de vídeo** | Vulkan 1.1 (drivers atualizados) | GTX 1060 / RX 580 ou superior (2K e 4K: RTX 3060 / RX 6700 ou superior) |
+| **RAM** | 4 GB | 8 GB ou mais |
 
 ## 💿 Versão do jogo (obrigatória)
 
@@ -102,12 +117,23 @@ NARUTO RISE OF A NINJA/
 
 ## 🚀 Instalação
 
+### Android
+
 1. Baixe o **APK** na página de [**Releases**](../../releases/latest) e instale. Talvez seja preciso permitir *"instalar apps de fontes desconhecidas"*.
 2. Copie a pasta do jogo para o celular, por exemplo `Armazenamento interno/Naruto/NARUTO RISE OF A NINJA`.
 3. Abra o app e toque em **ESCOLHER PASTA**.
 4. Permita o **acesso a todos os arquivos**: o jogo lê os dados direto da pasta, sem copiar nada.
 5. Escolha a pasta que contém o `default.xex`.
 6. Ajuste as configurações e toque em **JOGAR** 🍥
+
+### 🖥️ PC (Windows)
+
+1. Baixe o **`.zip` do Windows** na página de [**Releases**](../../releases/latest) e extraia numa pasta.
+2. Abra **`NarutoRiseOfANinja.exe`**.
+3. Clique em **ESCOLHER PASTA** e escolha a pasta do jogo, a que contém o `default.xex`.
+4. Ajuste as configurações e clique em **JOGAR** (ou aperte Enter).
+
+As configurações, os saves e o cache de shaders ficam na pasta onde você extraiu o port (`naruto.ini`, `data/`, `cache/`), não na pasta do jogo.
 
 > [!TIP]
 > Na primeira vez que cada cena aparece, o jogo compila shaders e pode engasgar um pouco. Nas próximas vezes eles já ficam salvos.
@@ -120,6 +146,7 @@ NARUTO RISE OF A NINJA/
 | **Resolução 720p** | Resolução original do Xbox 360 | ⚪ Padrão |
 | **Resolução 1080p / 2K / 4K** | Renderiza com mais pixels (2x a 3x) | 🔴 Bem mais pesado, para celulares fortes |
 | **Tela: 16:9 / Esticar** | Mantém a proporção original ou estica para a tela toda | ⚪ Nenhum |
+| **Janela / Tela cheia** (PC) | Como o jogo abre (F11 ou Alt+Enter alterna durante o jogo) | ⚪ Nenhum |
 | **Antisserrilhado: FXAA / FXAA+** | Suaviza as bordas serrilhadas | 🟠 Pesa um pouco a mais |
 | **Escala na tela: FSR / CAS** | Amplia a imagem com mais nitidez (AMD FidelityFX) | 🟠 Pesa um pouco a mais |
 | **Painel de FPS** | Mostra FPS, CPU, GPU e RAM | ⚪ Quase nenhum |
@@ -132,6 +159,19 @@ NARUTO RISE OF A NINJA/
 - **Na tela:** analógicos esquerdo e direito, D-pad, A/B/X/Y, LB/RB, LT/RT, BACK e START.
 - O botão **⇔** alterna entre 16:9 e tela esticada durante o jogo.
 - **Controle físico:** controles Bluetooth e USB compatíveis com Android são reconhecidos automaticamente.
+
+### 🖥️ PC
+
+Controles de Xbox e PlayStation funcionam direto. No teclado:
+
+| Tecla | Botão | Tecla | Botão |
+|---|---|---|---|
+| **W A S D** | Analógico esquerdo | **Setas** | Analógico direito |
+| **I J K L** | Direcional | **Enter** / **Tab** | START / BACK |
+| **Espaço** | A | **E** | B |
+| **Q** | X | **F** | Y |
+| **1** / **3** | LB / RB | **Z** / **C** | LT / RT |
+| **Ctrl esq. / dir.** | Apertar os analógicos | **F11** / **Alt+Enter** | Tela cheia |
 
 ## ❓ Perguntas frequentes
 
@@ -152,9 +192,9 @@ Não. O código foi recompilado a partir de um executável específico, então s
 </details>
 
 <details>
-<summary><b>Funciona em celulares 32 bits ou x86?</b></summary>
+<summary><b>Funciona em celulares 32 bits ou x86? E em Linux ou macOS?</b></summary>
 
-Não. Por enquanto só arm64-v8a.
+Não. Por enquanto só Android arm64-v8a e Windows x64.
 
 </details>
 

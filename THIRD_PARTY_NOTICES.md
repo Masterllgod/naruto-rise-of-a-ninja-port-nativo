@@ -2,7 +2,7 @@
 
 Este app usa os componentes de código aberto abaixo. O mesmo texto está dentro do app, no link **"Licenças"** do menu inicial.
 
-**FFmpeg (LGPL 2.1+):** o FFmpeg fica numa biblioteca separada (`lib/arm64-v8a/libffmpeg.so` dentro do APK) e pode ser substituído. O código-fonte usado é o fork do projeto Xenia: [has207/FFmpeg @ `d980192`](https://github.com/has207/FFmpeg/tree/d980192e175e6ff95bcd287af77e16fcb6597974), com a configuração de [xenia-canary/third_party/ffmpeg-xenia](https://github.com/xenia-canary/xenia-canary/tree/canary_experimental/third_party).
+**FFmpeg (LGPL 2.1+):** o FFmpeg fica numa biblioteca separada (`lib/arm64-v8a/libffmpeg.so` dentro do APK e `libffmpeg.dll` no pacote de PC) e pode ser substituído. O código-fonte usado é o fork do projeto Xenia: [has207/FFmpeg @ `d980192`](https://github.com/has207/FFmpeg/tree/d980192e175e6ff95bcd287af77e16fcb6597974), com a configuração de [xenia-canary/third_party/ffmpeg-xenia](https://github.com/xenia-canary/xenia-canary/tree/canary_experimental/third_party).
 
 ```
 Componentes de código aberto usados neste app
