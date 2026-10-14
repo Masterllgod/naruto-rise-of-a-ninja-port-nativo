@@ -30,7 +30,8 @@ Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.x
 - **Lutas a 60 FPS e modo história a 30 FPS** (o limite do próprio jogo) no Poco X7 Pro.
 - **6 resoluções:** 360p, 540p, 720p, 1080p, 2K e 4K. Menus, vídeos e cutscenes ficam inteiros em todas.
 - **Antisserrilhado FXAA e FXAA+** e **escala FSR 1.0 / CAS** da AMD, que podem ser ligados e desligados.
-- **Controles na tela:** dois analógicos, D-pad, todos os botões e gatilhos. Controles Bluetooth e USB também funcionam.
+- **⚡ Modo Desempenho:** um botão só, sem sombras e sem brilho, travado em 30 FPS, e o jogo **não fica em câmera lenta** quando o FPS cai.
+- **Controles na tela no estilo dos jogos de Naruto para celular:** analógico que aparece onde você encosta o dedo, câmera arrastando na metade direita, botões com ícones (soco, pulo, chute, substituição, shuriken, jutsu). Controles Bluetooth e USB também funcionam.
 - **Painel de desempenho:** FPS e uso de CPU, GPU e RAM. Pode ser arrastado pela tela ou recolhido.
 - **Modo 16:9 ou esticado** para a tela inteira.
 - Menu inicial com tema de Naruto 🌀, o mesmo no celular e no PC
@@ -41,8 +42,8 @@ Este port **não é um emulador de Xbox 360**. O executável do jogo (`default.x
 | Modo história | Luta |
 |:---:|:---:|
 | <img src="docs/screenshots/historia.jpg" width="100%"> | <img src="docs/screenshots/luta.jpg" width="100%"> |
-| **No celular (controles e painel)** | **Luta em 4K** |
-| <img src="docs/screenshots/celular.jpg" width="100%"> | <img src="docs/screenshots/luta-4k.jpg" width="100%"> |
+| **Controles na tela** | **Luta em 4K** |
+| <img src="docs/screenshots/controles.jpg" width="100%"> | <img src="docs/screenshots/luta-4k.jpg" width="100%"> |
 | **Menu no PC** | |
 | <img src="docs/screenshots/menu-pc.png" width="100%"> | |
 
@@ -144,6 +145,7 @@ As configurações, os saves e o cache de shaders ficam na pasta onde você extr
 
 | Opção | O que faz | Impacto no desempenho |
 |---|---|---|
+| **⚡ Modo Desempenho** (Android) | Tira as sombras e o brilho, usa 540p com sombreamento mais leve e trava em 30 FPS. O relógio do jogo segue o tempo real, então nada fica em câmera lenta se o FPS cair (lutas e modo história). Enquanto ligado, ele escolhe resolução, antisserrilhado e escala sozinho | 🟢 O mais leve de todos |
 | **Resolução 360p / 540p** | Renderiza com menos pixels | 🟢 Mais FPS: ideal para celulares mais fracos |
 | **Resolução 720p** | Resolução original do Xbox 360 | ⚪ Padrão |
 | **Resolução 1080p / 2K / 4K** | Renderiza com mais pixels (2x a 3x) | 🔴 Bem mais pesado, para celulares fortes |
@@ -154,12 +156,27 @@ As configurações, os saves e o cache de shaders ficam na pasta onde você extr
 | **Painel de FPS** | Mostra FPS, CPU, GPU e RAM | ⚪ Quase nenhum |
 
 > [!NOTE]
-> Se o FPS cair, use **Antisserrilhado: Off** e **Escala: Normal** e baixe a resolução.
+> Se o FPS cair, ligue o **⚡ Modo Desempenho**, ou use **Antisserrilhado: Off** e **Escala: Normal** e baixe a resolução.
 
 ## 🎮 Controles
 
-- **Na tela:** analógicos esquerdo e direito, D-pad, A/B/X/Y, LB/RB, LT/RT, BACK e START.
-- O botão **⇔** alterna entre 16:9 e tela esticada durante o jogo.
+- **Andar:** encoste o dedo em qualquer lugar da **metade esquerda** da tela. O analógico aparece ali e segue o dedo.
+- **Câmera:** arraste na **metade direita** da tela (fora dos botões). Funciona como o analógico direito, sem nada desenhado.
+- **Botões** (com a letra do controle num selinho, porque as dicas do jogo falam "aperte A"):
+
+| Ícone | Botão | No jogo |
+|---|---|---|
+| 👊 Soco (o maior) | X | Ataque |
+| 🦘 Pulo | A | Pular |
+| 🦵 Chute | Y | Ataque |
+| 🪵 Tronco | B | Substituição |
+| ✴️ Shuriken | RB | Arremessar arma |
+| 🏃 Correndo (hexágono) | RT | Correr / agarrar |
+| 🌀 Chakra (hexágono) | LT | Jutsu |
+| 👝 Bolsa | LB | Itens |
+| 🗺️ / ⏸️ | BACK / START | Mapa / pausa |
+
+- O botão do **olho** esconde os controles e o **⇔** alterna entre 16:9 e tela esticada.
 - **Controle físico:** controles Bluetooth e USB compatíveis com Android são reconhecidos automaticamente.
 
 ### 🖥️ PC
@@ -183,6 +200,13 @@ Controles de Xbox e PlayStation funcionam direto. No teclado:
 - Confira se o `default.xex` e o `AI2C.dll` batem com os hashes acima.
 - Confira se a permissão de **acesso a todos os arquivos** foi dada.
 - Confira se a pasta escolhida é a que contém o `default.xex`, e não uma pasta acima dela.
+
+</details>
+
+<details>
+<summary><b>O jogo fica em câmera lenta quando o FPS cai</b></summary>
+
+O jogo original avança um passo fixo a cada quadro (1/60 s nas lutas, 1/30 s no modo história), por isso fica lento quando o celular não acompanha. Ligue o **⚡ Modo Desempenho**: com ele o jogo segue o tempo real.
 
 </details>
 
