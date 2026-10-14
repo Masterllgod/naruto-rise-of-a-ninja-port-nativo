@@ -71,15 +71,17 @@ Testado no **Poco X7 Pro** (Dimensity 8400 Ultra, Mali-G720, 12 GB).
 
 ## 💿 Versão do jogo (obrigatória)
 
-O port foi feito para **uma versão específica** do executável. Outras versões ou regiões **não funcionam**, porque o código foi recompilado a partir deste arquivo.
+O port foi feito para **uma versão específica** do executável, a do **disco norte-americano** 🇺🇸🇨🇦. O código foi recompilado a partir deste arquivo, então o que vale é o `default.xex` ser **idêntico**: confira o hash abaixo.
 
 | Campo | Valor |
 |---|---|
 | Jogo | Naruto: Rise of a Ninja (Xbox 360) |
+| **Região do disco** | **América do Norte, NTSC-U (EUA/Canadá)**, com áudio em inglês e francês |
 | Title ID | `555307E5` |
 | Media ID | `12DF7A0D` |
 | Versão do executável | `0.0.0.2` (base `0.0.0.2`) |
 | Disco | 1 de 1 |
+| Trava de região do executável | Nenhuma (*region free*) |
 
 | Arquivo | Tamanho | SHA-1 | MD5 |
 |---|---|---|---|
@@ -185,9 +187,9 @@ Controles de Xbox e PlayStation funcionam direto. No teclado:
 </details>
 
 <details>
-<summary><b>Funciona com a versão europeia / japonesa / de outro disco?</b></summary>
+<summary><b>Funciona com a versão europeia (PAL) ou de outro disco?</b></summary>
 
-Não. O código foi recompilado a partir de um executável específico, então só funciona com a versão da tabela acima.
+A versão testada é a **norte-americana (NTSC-U)**. O código foi recompilado a partir desse `default.xex`, então outro disco só funciona se o `default.xex` dele for **idêntico** (mesmo SHA-1 da tabela). Se o hash for diferente, não funciona. O jogo não saiu no Japão para Xbox 360.
 
 </details>
 
